@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mango Streaming | Tienda Digital</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:'Poppins',sans-serif;background:#0f172a;color:white}
+header{background:#020617;padding:25px;text-align:center}
+header h1{margin:0;font-size:34px}
+header p{color:#cbd5f5}
+nav{margin-top:10px}
+nav a{color:#cbd5f5;text-decoration:none;margin:0 10px;font-size:14px}
+.hero{padding:60px 20px;text-align:center;background:linear-gradient(180deg,#0f172a,#020617)}
+.hero h2{font-size:36px;margin-bottom:10px}
+.hero p{color:#cbd5f5}
+.cta a{background:#22c55e;padding:12px 22px;border-radius:8px;color:white;text-decoration:none;font-weight:600}
+.container{max-width:1200px;margin:auto;padding:40px 20px}
+.section-title{text-align:center;font-size:28px;margin-bottom:30px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}
+.card{background:#1e293b;border-radius:14px;padding:25px;text-align:center;box-shadow:0 10px 25px rgba(0,0,0,.4)}
+.card img{width:80px;margin-bottom:10px}
+.price{font-size:22px;color:#22c55e;margin:10px 0}
+button{background:#22c55e;border:none;padding:10px 18px;border-radius:8px;color:white;font-weight:600;cursor:pointer}
+button:hover{background:#16a34a}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+.feature{background:#1e293b;padding:20px;border-radius:10px;text-align:center}
+footer{background:#020617;padding:30px;text-align:center}
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:14px 18px;border-radius:50px;text-decoration:none;font-weight:600}
+.cart{position:fixed;top:20px;right:20px;background:#22c55e;padding:10px 14px;border-radius:8px;font-weight:600}
+</style>
+</head>
+<body>
+
+<div class="cart">Carrito: <span id="cartCount">0</span></div>
+
+<header>
+<h1>Mango Streaming</h1>
+<p>Streaming, juegos y suscripciones digitales</p>
+<nav>
+<a href="#servicios">Servicios</a>
+<a href="#pagos">Pagos</a>
+<a href="#beneficios">Beneficios</a>
+</nav>
+</header>
+
+<section class="hero">
+<h2>Compra servicios digitales al instante</h2>
+<p>Entrega rápida y soporte directo por WhatsApp.</p>
+<div class="cta">
+<a href="https://wa.me/595985398622">Comprar ahora</a>
+</div>
+</section>
+
+<div class="container" id="servicios">
+<h2 class="section-title">Catálogo</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg">
+<h3>Netflix Premium</h3>
+<div class="price">Gs. 30.000</div>
+<button onclick="addCart()">Agregar</button>
+</div>
+
+<div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Roblox_Logo_2022.svg">
+<h3>Roblox 400 Robux</h3>
+<div class="price">Gs. 45.000</div>
+<button onclick="addCart()">Agregar</button>
+</div>
+
+<div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg">
+<h3>Spotify Premium</h3>
+<div class="price">Gs. 20.000</div>
+<button onclick="addCart()">Agregar</button>
+</div>
+
+<div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Disney%2B_logo.svg">
+<h3>Disney+</h3>
+<div class="price">Gs. 30.000</div>
+<button onclick="addCart()">Agregar</button>
+</div>
+
+</div>
+</div>
+
+<div class="container" id="pagos">
+<h2 class="section-title">Panel de Pagos</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Pago con PayPal</h3>
+<p>Pago internacional automático</p>
+<a href="https://www.paypal.com"><button>Pagar</button></a>
+</div>
+
+<div class="card">
+<h3>Transferencia / QR</h3>
+<p>Envía comprobante</p>
+<a href="https://wa.me/595985398622"><button>Enviar comprobante</button></a>
+</div>
+
+<div class="card">
+<h3>Alias Mango</h3>
+<p>Paga con tu billetera</p>
+<a href="https://wa.me/595985398622"><button>Pagar</button></a>
+</div>
+
+</div>
+</div>
+
+<div class="container" id="beneficios">
+<h2 class="section-title">Beneficios</h2>
+
+<div class="features">
+<div class="feature">⚡ Activación rápida</div>
+<div class="feature">🔒 Pagos seguros</div>
+<div class="feature">💬 Soporte por WhatsApp</div>
+<div class="feature">⭐ Clientes satisfechos</div>
+</div>
+</div>
+
+<footer>
+<p>© 2026 Mango Streaming</p>
+<p>WhatsApp: 0985 398 622</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/595985398622">WhatsApp</a>
+
+<script>
+let cart=0
+function addCart(){
+cart++
+document.getElementById('cartCount').innerText=cart
+}
+</script>
+
+</body>
+</html>
